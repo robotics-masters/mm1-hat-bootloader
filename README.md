@@ -33,6 +33,12 @@ openocd -f bootloader.cfg
 
 We can flash any firmware we want now (possibly including a bootloader).
 
+Note:  Must pad the firmware before you can upload other parts
+
+```
+truncate -s 8192 samd21_sam_ba.bin; cat samd21_sam_ba.bin firmware.bin > boot-firmware.bin
+```
+
 Lets flash the SeeSaw (or CircuitPython) bootloader:
 
 ```
