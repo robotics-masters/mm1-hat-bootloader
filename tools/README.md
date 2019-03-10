@@ -2,15 +2,6 @@
 
 This contains the files required to use the Raspberry Pi as a programmer on GPIO24 and GPIO25.  
 
-
-## Usage
-
-**Note:** Remember to update openocd.cfg before uploading.  Make sure correct bootloader/firmware is being uploaded.
-
-```
-sudo openocd
-```
-
 ## Directory Stucture
 
 ```
@@ -20,6 +11,43 @@ openocd
   ./target    - contains atsamd21 for openocd
 ```
 
+
+## Prepare Build Environment (for OpenOCD)
+
+```
+sudo apt install gcc-arm-none-eabi dirmngr libtool autoconf libusb-dev
+```
+
+**Clone the OpenOCD repository**
+
+Note: (as of writing 322d2fa12c9b5520e06c1d581ce8b4e3c75750ca):
+
+```
+git clone https://git.code.sf.net/p/openocd/code openocd-code
+cd openocd-code
+./bootstrap
+./configure --enable-sysfsgpio --enable-bmc8235gpio
+make
+sudo make install
+```
+
+## Usage
+
+**Note:** Remember to update openocd.cfg before uploading.  Make sure correct bootloader/firmware is being uploaded.
+
+```
+sudo openocd
+```
+
+## Example Usage - Arduino Bootloader
+
+Lets flash the Arduino Zero (or Adafruit Feather m0) bootloader:
+
+```
+cd openocd
+wget -O samd21_sam_ba.bin https://github.com/arduino/ArduinoCore-samd/blob/master/bootloaders/zero/samd21_sam_ba.bin?raw=true
+openocd -f bootloader.cfg
+```
 
 ## Padding File
 
