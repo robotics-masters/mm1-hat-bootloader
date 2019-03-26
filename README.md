@@ -7,6 +7,9 @@ Tools for building UF2 firmware and flashing blank SAM D21G chips.
 
 Please see the mm1-hat-bootloader/tools folder for further details.
 
+Vendor ID: 0x0005
+Product ID: 0x0002
+
 
 ## Build UF2
 
