@@ -1,6 +1,6 @@
 # Robo HAT MM1 - Bootloader Tools
 
-Tools for building UF2 firmware and flashing blank SAM D21G chips.
+Tools for building UF2 firmware and flashing blank ATMEL SAM D21G chips.
 
 
 ## Usage - Tools
