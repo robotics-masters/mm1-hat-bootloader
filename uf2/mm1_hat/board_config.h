@@ -7,11 +7,11 @@
 #define PRODUCT_NAME "Robo HAT MM1"
 #define VOLUME_LABEL "ROBOBOOT"
 #define INDEX_URL "https://roboticsmasters.co"
-#define BOARD_ID "SAMD21G18A-v2"
+#define BOARD_ID "SAMD21G18A-v4"
 
 #define USB_VID 0x0005
 #define USB_PID 0x0002
 
-#define LED_PIN PIN_PA12
+#define LED_PIN PIN_PA21
 
 #endif
