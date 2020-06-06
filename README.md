@@ -11,11 +11,6 @@ Vendor ID: 0x0005
 Product ID: 0x0002
 
 
-## Build UF2
-
-Please see the mm1-hat-bootloader/uf2 folder for further details.  Alternatively: https://github.com/Microsoft/uf2-samdx1
-
-
 ## Setting up your environment
 
 In order to compile the bootloader, you must install `arm-none-eabi-gcc`.  Please follow the below instructions for setting up your environment.
@@ -39,3 +34,8 @@ Build the bootloader:
 ```
 make -j4 BOARD=robohatmm1_m4
 ```
+
+## Build UF2
+
+Please see the mm1-hat-bootloader/uf2 folder for further details.  Alternatively: https://github.com/Microsoft/uf2-samdx1
+
