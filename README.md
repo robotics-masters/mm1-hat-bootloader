@@ -30,18 +30,12 @@ Clone the repository:
 
 ```
 git clone https://github.com/Microsoft/uf2-samdx1
+cd uf2-samdx1
 ```
 
-Copy the files into the boards folder (this step will hopefully be removed one day):
-
-```
-TODO
-```
 
 Build the bootloader:
 
 ```
-make -j4 BOARD=mm1_hat
+make -j4 BOARD=robohatmm1_m4
 ```
-
-
