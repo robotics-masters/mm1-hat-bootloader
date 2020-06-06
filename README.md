@@ -3,14 +3,6 @@
 Tools for building UF2 firmware and flashing blank ATMEL SAM D21G chips.
 
 
-## Usage - Tools
-
-Please see the mm1-hat-bootloader/tools folder for further details.
-
-Vendor ID: 0x0005
-Product ID: 0x0002
-
-
 ## Setting up your environment
 
 In order to compile the bootloader, you must install `arm-none-eabi-gcc`.  Please follow the below instructions for setting up your environment.
