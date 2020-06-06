@@ -39,16 +39,6 @@ sudo make install
 sudo openocd
 ```
 
-## Example Usage - Arduino Bootloader
-
-Lets flash the Arduino Zero (or Adafruit Feather m0) bootloader:
-
-```
-cd openocd
-wget -O samd21_sam_ba.bin https://github.com/arduino/ArduinoCore-samd/blob/master/bootloaders/zero/samd21_sam_ba.bin?raw=true
-openocd -f bootloader.cfg
-```
-
 ## Padding File
 
 OpenOCD does not allow for uploading of bin files without a firmware attached.  To overcome this, all firmware (CircuitPython, Seesaw, etc) needs to be padded by 0x2000 bits (8 kbytes) for the bootloader.  Use below if you plan on using OpenOCD for uploading new firmware.
@@ -60,3 +50,14 @@ truncate -s 8192 samd21_sam_ba.bin; cat samd21_sam_ba.bin firmware.bin > boot-fi
 * samd21_sam_ba.bin - bootloader
 * firmware.bin - firmware binary (CircuitPython, Seesaw, etc)
 * boot-firmware.bin - output file to be uploaded using `sudo openocd`
+
+
+## Example Usage - Arduino Bootloader
+
+Lets flash the Arduino Zero (or Adafruit Feather m0) bootloader:
+
+```
+cd openocd
+wget -O samd21_sam_ba.bin https://github.com/arduino/ArduinoCore-samd/blob/master/bootloaders/zero/samd21_sam_ba.bin?raw=true
+openocd -f bootloader.cfg
+```
